@@ -29,6 +29,10 @@
       destination: Cesium.Cartesian3.fromDegrees(73.84108287425587, 18.515145342479908, 800),
     });
     // Add Cesium OSM Buildings.
+
+    const buildingTileset = await Cesium.createOsmBuildingsAsync();
+    viewer.scene.primitives.add(buildingTileset); 
+    
     const tileset = viewer.scene.primitives.add(
   await Cesium.Cesium3DTileset.fromIonAssetId(2537068),
 );
