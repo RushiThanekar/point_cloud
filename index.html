@@ -30,7 +30,8 @@
     });
     // Add Cesium OSM Buildings.
 
-
+    const buildingTileset = await Cesium.createOsmBuildingsAsync();
+    viewer.scene.primitives.add(buildingTileset); 
     
     const tileset = viewer.scene.primitives.add(
   await Cesium.Cesium3DTileset.fromIonAssetId(2537068),
